@@ -1,0 +1,10 @@
+192.168.1.10 - - [01/Oct/2026:10:00:00] GET /index.html 200 Mozilla/5.0
+10.0.0.5 - - [01/Oct/2026:10:00:05] POST /login.php 401 sqlmap/1.0
+10.0.0.5 - - [01/Oct/2026:10:01:00] GET /admin 403 sqlmap/1.0
+10.0.0.5 - - [01/Oct/2026:10:02:00] GET /etc/passwd 404 sqlmap/1.0
+10.0.0.5 - - [01/Oct/2026:10:03:00] GET /search?q=<script>alert(1)</script> 200 Mozilla/5.0
+10.0.0.5 - - [01/Oct/2026:10:04:00] GET /page?cmd=;ls 200 curl/7.68.0
+10.0.0.5 - - [01/Oct/2026:10:05:00] GET /page?cmd=;whoami 200 curl/7.68.0
+172.16.0.1 - - [01/Oct/2026:10:06:00] GET /index.html 200 Chrome/120
+10.0.0.5 - - [01/Oct/2026:10:07:00] GET /.env 404 python-urllib/3.8
+10.0.0.5 - - [01/Oct/2026:10:08:00] GET /wp-admin 403 nikto/2.5
