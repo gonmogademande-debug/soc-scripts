@@ -1,0 +1,27 @@
+=========================================
+RAPPORT D'INVESTIGATION - INJECTION DE COMMANDES
+=========================================
+Analyste : KAI-ARLA
+Date : 25/10/2026
+Cible : http://127.0.0.1:8080/vulnerable.php
+
+VULNÉRABILITÉ :
+- Injection de commandes via le paramètre "cmd"
+- Le code PHP utilise system($_GET['cmd']) sans validation
+
+EXPLOITATION RÉUSSIE :
+- ?cmd=whoami → u0_a171 (utilisateur identifié)
+- ?cmd=ls → Liste des fichiers du serveur
+- ?cmd=cat /etc/passwd → Lecture du fichier des utilisateurs
+
+IMPACT :
+- Exécution de commandes arbitraires sur le serveur
+- Accès aux fichiers sensibles
+- Compromission totale du serveur
+
+RECOMMANDATION :
+- Ne jamais utiliser system() avec des entrées utilisateur
+- Valider et assainir toutes les entrées
+- Utiliser des fonctions sécurisées (escapeshellarg)
+
+=========================================
