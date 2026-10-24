@@ -1,0 +1,31 @@
+=========================================
+RAPPORT D'INVESTIGATION - ANALYSE DE LOGS
+=========================================
+Analyste : KAI-ARLA
+Date : 24/10/2026
+Outil : grep, awk (simulation Splunk)
+
+IP SUSPECTE : 10.0.0.5
+Nombre de requêtes : 8
+
+TENTATIVES DÉTECTÉES :
+- sqlmap/1.0 (injection SQL) : 3 requêtes
+- curl/7.68.0 (injection de commandes) : 2 requêtes
+- python-urllib/3.8 (scan) : 1 requête
+- nikto/2.5 (scan de vulnérabilités) : 1 requête
+
+CIBLES :
+- /login.php (401)
+- /admin (403)
+- /etc/passwd (404)
+- /.env (404)
+- /wp-admin (403)
+
+TYPE D'ATTAQUE : Tentative d'intrusion multi-vecteurs
+RÉSULTAT : Toutes les tentatives ont échoué (codes 401, 403, 404)
+
+RECOMMANDATION :
+- Bloquer l'IP 10.0.0.5
+- Vérifier les logs du serveur web
+- Escalader à un analyste senior
+=========================================
