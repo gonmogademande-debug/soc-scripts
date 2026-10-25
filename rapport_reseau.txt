@@ -1,0 +1,32 @@
+=========================================
+RAPPORT D'INVESTIGATION - ANALYSE DE TRAFIC HTTP
+=========================================
+Analyste : KAI-ARLA
+Date : 25/10/2026
+Outil : curl -v (simulation de tcpdump)
+
+REQUÊTE CAPTURÉE :
+GET /vulnerable.php?cmd=whoami HTTP/1.1
+Host: 127.0.0.1:8080
+User-Agent: curl/8.23.0
+
+RÉPONSE DU SERVEUR :
+HTTP/1.1 200 OK
+Content-type: text/html
+<pre>u0_a171</pre>
+
+ANALYSE :
+- La requête contient une injection de commande (cmd=whoami)
+- Le serveur a exécuté la commande et renvoyé le résultat
+- L'attaquant a utilisé curl pour envoyer la requête
+
+IMPACT :
+- Exécution de commandes arbitraires sur le serveur
+- Fuite d'informations (utilisateur, système)
+
+RECOMMANDATION :
+- Bloquer les requêtes contenant "cmd=" ou "system("
+- Valider et assainir les entrées utilisateur
+- Utiliser un WAF (Web Application Firewall)
+
+=========================================
