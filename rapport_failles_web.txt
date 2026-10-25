@@ -1,0 +1,26 @@
+=========================================
+RAPPORT D'INVESTIGATION - FAILLES WEB
+=========================================
+Analyste : KAI-ARLA
+Date : 25/10/2026
+
+FAILLE 1 : XSS (Cross-Site Scripting)
+- Fichier : xss.php
+- Paramètre vulnérable : name
+- Payload utilisé : <script>alert('XSS')</script>
+- Résultat : Script injecté dans la page
+- Impact : Vol de cookies, redirection, défiguration
+
+FAILLE 2 : Injection SQL
+- Fichier : login.php
+- Paramètres vulnérables : username, password
+- Payload utilisé : ' OR '1'='1
+- Résultat : Authentification contournée
+- Impact : Accès non autorisé, vol de données
+
+RECOMMANDATION :
+- XSS : Nettoyer les entrées avec htmlspecialchars()
+- SQLi : Utiliser des requêtes préparées (PDO)
+- Valider et assainir toutes les entrées utilisateur
+
+=========================================
