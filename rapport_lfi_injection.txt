@@ -1,0 +1,25 @@
+=========================================
+RAPPORT D'INVESTIGATION - LFI & COMMAND INJECTION
+=========================================
+Analyste : KAI-ARLA
+Date : 26/10/2026
+
+FAILLE 1 : Command Injection
+- Fichier : ping.php
+- Paramètre vulnérable : ip
+- Payload utilisé : ?ip=127.0.0.1;whoami
+- Résultat : Exécution de la commande whoami (u0_a171)
+- Impact : Exécution de commandes arbitraires sur le serveur
+
+FAILLE 2 : LFI (Local File Inclusion)
+- Fichier : lfi.php
+- Paramètre vulnérable : page
+- Payload utilisé : ?page=/etc/passwd
+- Résultat : Lecture du fichier /etc/passwd
+- Impact : Accès à des fichiers sensibles
+
+RECOMMANDATION :
+- Command Injection : Ne jamais passer d'entrées utilisateur à system(), utiliser escapeshellarg()
+- LFI : Valider les entrées, utiliser une liste blanche de pages autorisées
+
+=========================================
