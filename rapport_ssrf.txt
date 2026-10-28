@@ -1,0 +1,26 @@
+=========================================
+RAPPORT D'INVESTIGATION - SSRF
+=========================================
+Analyste : KAI-ARLA
+Date : 28/10/2026
+
+FAILLE : SSRF (Server-Side Request Forgery)
+- Fichier : ssrf.php
+- Paramètre vulnérable : url
+- Vulnérabilité : Le serveur exécute file_get_contents() sans validation.
+
+EXPLOITATION RÉUSSIE :
+- file:///data/data/com.termux/.../secret.txt -> Lecture de fichiers locaux
+- http://example.com -> Le serveur a récupéré le HTML de la page externe
+
+IMPACT :
+- Accès à des services internes (bases de données, APIs)
+- Accès aux métadonnées cloud (AWS, GCP)
+- Contournement des pare-feux et des restrictions réseau
+
+RECOMMANDATION :
+- Valider les URL (liste blanche de domaines autorisés)
+- Bloquer les adresses IP internes (127.0.0.1, 192.168.x.x, 169.254.x.x)
+- Désactiver les wrappers dangereux (file://, dict://, gopher://)
+
+=========================================
