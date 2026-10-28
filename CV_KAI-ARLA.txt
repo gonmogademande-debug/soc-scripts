@@ -1,0 +1,29 @@
+KAI-ARLA
+Analyste SOC Junior (Autodidacte)
+Email : gonmogademande@gmail.com
+GitHub : github.com/gonmogademande-debug
+
+PROFIL
+Autodidacte en cybersécurité, formé sur LetsDefend et TryHackMe. Passionné par l'analyse de logs et la détection d'attaques. J'ai développé un portfolio concret avec 7 rapports d'investigation et 5 scripts d'analyse SOC.
+
+COMPÉTENCES TECHNIQUES
+- Analyse de logs (Linux, Web, SSH)
+- Détection d'attaques (SQLi, XSS, LFI, Command Injection)
+- Scripting Bash
+- Git / GitHub / SSH
+- OSINT, Threat Intelligence
+
+PROJETS
+Portfolio d'analyste SOC (github.com/gonmogademande-debug/soc-portfolio-journey)
+- Rédaction de rapports d'investigation (Splunk, PHP2Shell, analyse réseau, failles web).
+- Développement de scripts Bash pour l'analyse de logs.
+- Simulation d'attaques et d'exploitations de vulnérabilités (XSS, SQLi, LFI, Command Injection).
+
+FORMATION
+- LetsDefend : SOC Fundamentals, Phishing, SQLi, XSS, Command Injection.
+- TryHackMe : Cyber Security 101 (en cours).
+- Environnement Linux : Termux / Debian.
+
+LANGUES
+- Français (courant)
+- Anglais (technique)
