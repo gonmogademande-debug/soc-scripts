@@ -1,0 +1,25 @@
+=========================================
+RAPPORT D'INVESTIGATION - IDOR & FILE UPLOAD
+=========================================
+Analyste : KAI-ARLA
+Date : 28/10/2026
+
+FAILLE 1 : IDOR (Insecure Direct Object Reference)
+- Fichier : idor.php
+- Paramètre vulnérable : id
+- Payload utilisé : ?id=2
+- Résultat : Accès au profil admin et vol de clé API
+- Impact : Fuite de données sensibles
+
+FAILLE 2 : File Upload (Web Shell)
+- Fichier : upload.php
+- Vulnérabilité : Aucune vérification de l'extension
+- Payload utilisé : Upload de shell.php
+- Résultat : Exécution de commandes système à distance (whoami = u0_a115)
+- Impact : Compromission totale du serveur
+
+RECOMMANDATION :
+- IDOR : Vérifier les autorisations (l'utilisateur a-t-il le droit de voir id=2 ?)
+- Upload : Vérifier l'extension, le type MIME, et renommer le fichier.
+
+=========================================
