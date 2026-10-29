@@ -1,0 +1,10 @@
+[Fri Oct 30 00:03:30 2026] PHP 8.5.12 Development Server (http://127.0.0.1:8080) started
+[Fri Oct 30 00:03:58 2026] 127.0.0.1:32921 Accepted
+[Fri Oct 30 00:03:58 2026] 127.0.0.1:32921 [200]: GET /idor.php?id=1
+[Fri Oct 30 00:03:58 2026] 127.0.0.1:32921 Closing
+[Fri Oct 30 00:04:21 2026] 127.0.0.1:32923 Accepted
+[Fri Oct 30 00:04:21 2026] 127.0.0.1:32923 [200]: GET /idor.php?id=2
+[Fri Oct 30 00:04:21 2026] 127.0.0.1:32923 Closing
+[Fri Oct 30 00:04:34 2026] 127.0.0.1:32924 Accepted
+[Fri Oct 30 00:04:34 2026] 127.0.0.1:32924 [200]: GET /xss.php?name=<script>alert(1)</script>
+[Fri Oct 30 00:04:34 2026] 127.0.0.1:32924 Closing
